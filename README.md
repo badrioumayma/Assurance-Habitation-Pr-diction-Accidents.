@@ -2,7 +2,11 @@
 
 Predict whether a building will have an insurance claim during its coverage period, from its type, size, location and structural features. The model is served through an interactive **Streamlit** web app.
 
-![InsuraPredict app](assets/app_screenshot.png)
+## 🖥️ Dashboard
+
+| Claim risk prediction | Model performance |
+|---|---|
+| ![Prediction tab](assets/app_screenshot.png) | ![Model performance tab](assets/app_performance.png) |
 
 ## ✨ Features
 
@@ -40,8 +44,6 @@ Target: `Claim` (22.5% positive, so the classes are imbalanced).
 | Recall (claim class) | 0.59 | |
 | F1 (claim class) | 0.48 | |
 
-![Model performance](assets/app_performance.png)
-
 ### 💡 Lesson learned: fixing data leakage
 
 An earlier version of this project reported **~92% accuracy**. That number came from data leakage: the minority class was upsampled *with replacement before* the train/test split, so copies of the same buildings appeared in both sets and the models were partly scored on rows they had memorized. Accuracy was also measured on an artificially balanced test set.
@@ -51,8 +53,8 @@ After the fix (split first, resample only inside the training folds, evaluate on
 ## 🚀 Run it locally
 
 ```bash
-git clone https://github.com/NASSERamine/Assurance-Habitation-Pr-diction-Accidents.git
-cd Assurance-Habitation-Pr-diction-Accidents
+git clone https://github.com/badrioumayma/Assurance-Habitation-Pr-diction-Accidents..git
+cd Assurance-Habitation-Pr-diction-Accidents.
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
