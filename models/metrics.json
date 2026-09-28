@@ -1,0 +1,23 @@
+{
+  "best_model": "Logistic Regression",
+  "cv": {
+    "Logistic Regression": {
+      "cv_roc_auc": 0.6941,
+      "cv_roc_auc_std": 0.011
+    },
+    "Random Forest": {
+      "cv_roc_auc": 0.6769,
+      "cv_roc_auc_std": 0.0242
+    },
+    "Gradient Boosting": {
+      "cv_roc_auc": 0.6792,
+      "cv_roc_auc_std": 0.0177
+    }
+  },
+  "test": {
+    "roc_auc": 0.7342,
+    "pr_auc": 0.4643,
+    "f1_claim": 0.4767,
+    "baseline_claim_rate": 0.2254
+  }
+}
